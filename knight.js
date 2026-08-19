@@ -35,9 +35,18 @@ export function knightMoves(startingPos, destination) {
     traversalNode = traversalNode.prevNode;
   }
 
-  return toDest.reverse();
+  toDest.reverse();
+  printMoves();
+  return toDest;
 
   // helper funcs
+  function printMoves() {
+    console.log(`You made it in ${toDest.length} moves! Here's your path:`);
+    for (const move of toDest) {
+      console.log(move);
+    }
+  }
+
   function newValidMove(square, prevNode) {
     const newNode = new Node(square, prevNode);
     queue.push(newNode);
