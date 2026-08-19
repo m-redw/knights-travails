@@ -56,9 +56,7 @@ export function knightMoves(startingPos, destination) {
   }
 
   function checkVisisted(square) {
-    if (visited.has(square.toString())) {
-      return false;
-    }
+    if (visited.has(square.toString())) return false;
     return true;
   }
 
