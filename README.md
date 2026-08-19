@@ -7,7 +7,7 @@ Create a function "...that shows the shortest possible way to get from one squar
 ## Some background:
 
 Before I started this project, I had just completed the binary search tree project. That project was still fresh in my mind since I finished it just 2 days prior, so when I first tackled this project, the first idea that came to mind was using a BST.
-I wanted to use a node class and have its branches be possibles moves the knight could make. I wanted to use the branches as paths and use a DFS approach to go from the root to the leaf (destination) to get the shortest path. 
+I wanted to use a node class and have its branches be possible moves the knight could make. I wanted to use the branches as paths and use a DFS approach to go from the root to the leaf (destination) to get the shortest path. 
 However, I spent a lot of time going back and forth between a BFS approach and a DFS approach because I was really hung up on which of the two would be less tedious, but ultimately, I came up with the following.
 
 ### Idea 1 (NOT solution)
@@ -27,7 +27,7 @@ This would go on until all possible moves were made or the destination was reach
 At the end, I would use DFS to find the shortest possible route by checking depths. The shortest depth was the shortest/quickest path, and the node's parent was used to backtrack and return the answer as an array.
 
 This idea seemed fine at the time, but it seemed **tedious**.
-**I really though there was a better idea**, which after some thinking, and some hints from the internet and AI, I came up with the 2nd idea.
+**I really thought there was a better idea**, which after some thinking, and some hints from the internet and AI, I came up with the 2nd idea.
 
 ### Idea 2 (solution)
 
@@ -66,7 +66,7 @@ Knowing those 2 flaws and the niceness of using BFS for checking knight movement
 ```
 
 Afterwards, it was pretty smooth sailing.
-I created a node class cuz I still needed one. This time however, it just has 2 properties: square, and prevNode.
+I created a node class cuz I still needed one. This time however, it just has 2 properties: square (coords), and prevNode.
 
 I also, like mentioned in checking, used sets instead of objects to check for visited squares.
 
@@ -78,4 +78,4 @@ The **main** issue that I faced was ultimately the algorithm. How should I use B
 
 I'm happy that I got this seemingly hard project done, but I'm not fully satisfied. I know I learned a lot from this (i.e. sets, BFS, importance of psuedocode, etc), but I feel like it would've felt so much more rewarding if I spent more time coming up with the 2nd idea myself fully.
 
-*But imma be honest, I don't if I could've come up/understood some of the ideas like the visited nodes.*
+*But imma be honest, I don't know if I could've come up/understood some of the ideas like the visited nodes without looking them up.*
